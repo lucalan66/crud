@@ -1,6 +1,7 @@
 <h1>Editando la nota: <%= @note.title %></h1>
 
 <form action="/notes/<%=@note.id%>" method="POST">
+	<input type="hidden" name="_method" value="PATCH">
 	<label for = "title">Título</label>
 	<input type="text" name="title" value="<%=@note.title%>">
 	<br>
@@ -8,5 +9,5 @@
 	<br>
 	<textarea name="content" rows="10" cols="30"><%=@note.content%></textarea>
 	<br>
-	<input type="submit" value="Guardar">
+	<input type="submit" value="Actualizar">
 </form>
