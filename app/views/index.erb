@@ -1,0 +1,9 @@
+<h1>Esta es la lista de notas</h1>
+
+<ul>
+  <% @notes.each do |note| %>
+    <li><a href="/notes/<%= note.id %>"><%= note.title %></a></li>
+  <% end %>
+</ul>
+
+<a href="/notes/new">Crea tu nota nueva</a>
